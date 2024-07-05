@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mySQL_DB_for_jpa_advanced:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: db_root_password
+      MYSQL_DATABASE: jpa_practice_db
+      MYSQL_USER: db_user_name
+      MYSQL_PASSWORD: db_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mySQL_DB_for_jpa_advanced_data:/var/lib/mysql
+
+volumes:
+  mySQL_DB_for_jpa_advanced_data:
