@@ -1,4 +1,4 @@
-package playground.jpa.advanced.specification.model;
+package playground.jpa.advanced.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -9,10 +9,7 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class Photo {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+public class Photo extends ProductContextBaseEntity {
     private String url;
     private boolean isThumbnail;
     private String alternativeText;

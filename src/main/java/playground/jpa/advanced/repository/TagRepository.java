@@ -1,6 +1,6 @@
-package playground.jpa.advanced.specification.repository;
+package playground.jpa.advanced.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import playground.jpa.advanced.specification.model.Tag;
+import playground.jpa.advanced.entities.Tag;
 
 public interface TagRepository extends JpaRepository<Tag, Integer> {}

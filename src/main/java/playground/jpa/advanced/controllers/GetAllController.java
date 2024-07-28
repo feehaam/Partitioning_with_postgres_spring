@@ -1,13 +1,13 @@
-package playground.jpa.advanced.specification.controllers;
+package playground.jpa.advanced.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import playground.jpa.advanced.specification.repository.PhotoRepository;
-import playground.jpa.advanced.specification.repository.ProductRepository;
-import playground.jpa.advanced.specification.repository.TagRepository;
-import playground.jpa.advanced.specification.repository.VariantRepository;
+import playground.jpa.advanced.repository.PhotoRepository;
+import playground.jpa.advanced.repository.ProductRepository;
+import playground.jpa.advanced.repository.TagRepository;
+import playground.jpa.advanced.repository.VariantRepository;
 
 @RestController
 @RequiredArgsConstructor

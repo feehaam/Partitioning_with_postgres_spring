@@ -1,6 +1,5 @@
-package playground.jpa.advanced.specification.model;
+package playground.jpa.advanced.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -9,10 +8,7 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class Variant {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+public class Variant extends ProductContextBaseEntity {
     private String name;
     private String detail;
     private Double price;

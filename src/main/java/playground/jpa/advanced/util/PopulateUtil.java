@@ -1,22 +1,24 @@
-package playground.jpa.advanced.specification.util;
+package playground.jpa.advanced.util;
+
 
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import playground.jpa.advanced.specification.model.Photo;
-import playground.jpa.advanced.specification.model.Product;
-import playground.jpa.advanced.specification.model.Tag;
-import playground.jpa.advanced.specification.model.Variant;
-import playground.jpa.advanced.specification.repository.PhotoRepository;
-import playground.jpa.advanced.specification.repository.ProductRepository;
-import playground.jpa.advanced.specification.repository.TagRepository;
-import playground.jpa.advanced.specification.repository.VariantRepository;
+import playground.jpa.advanced.entities.Photo;
+import playground.jpa.advanced.entities.Product;
+import playground.jpa.advanced.entities.Tag;
+import playground.jpa.advanced.entities.Variant;
+import playground.jpa.advanced.repository.PhotoRepository;
+import playground.jpa.advanced.repository.ProductRepository;
+import playground.jpa.advanced.repository.TagRepository;
+import playground.jpa.advanced.repository.VariantRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-@Service @RequiredArgsConstructor
+@Service
+@RequiredArgsConstructor
 public class PopulateUtil {
     private final Random random = new Random();
     private final ProductRepository productsRepository;
