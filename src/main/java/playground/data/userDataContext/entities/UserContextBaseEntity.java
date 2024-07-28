@@ -1,4 +1,4 @@
-package playground.jpa.advanced.entities;
+package playground.data.userDataContext.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Setter
 @ToString
 @MappedSuperclass
-public abstract class ProductContextBaseEntity implements Serializable {
+public abstract class UserContextBaseEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(updatable = false, nullable = false)
@@ -30,7 +30,7 @@ public abstract class ProductContextBaseEntity implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof ProductContextBaseEntity that)) return false;
+        if (!(o instanceof UserContextBaseEntity that)) return false;
         return id.equals(that.id);
     }
 }

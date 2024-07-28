@@ -1,4 +1,4 @@
-package playground.jpa.advanced.entities;
+package playground.data.productDataContext.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
