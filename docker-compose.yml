@@ -1,32 +1,28 @@
-version: '3'
-
+version: "3.8"
 services:
-  mySQL_DB_for_jpa_advanced:
-    image: mysql:8.0
-    environment:
-      MYSQL_ROOT_PASSWORD: db_root_password
-      MYSQL_DATABASE: jpa_practice_db
-      MYSQL_USER: db_user_name
-      MYSQL_PASSWORD: db_password
+  partition-jpa-practice:
+    image: postgres
+    container_name: local_pgdb
+    restart: always
     ports:
-      - "3306:3306"
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: pg-user
+      POSTGRES_PASSWORD: pg-password
     volumes:
-      - mySQL_DB_for_jpa_advanced_data:/var/lib/mysql
-    networks:
-      - my_network
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+      - local_pgdata:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    restart: always
     ports:
-      - "3300:80"
+      - "8888:80"
     environment:
-      PMA_HOST: mySQL_DB_for_jpa_advanced
-      PMA_PORT: 3306
-    networks:
-      - my_network
+      PGADMIN_DEFAULT_EMAIL: pg-admin@mail.com
+      PGADMIN_DEFAULT_PASSWORD: pg-admin-password
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
 
 volumes:
-  mySQL_DB_for_jpa_advanced_data:
-
-networks:
-  my_network:
+  local_pgdata:
+  pgadmin-data:
