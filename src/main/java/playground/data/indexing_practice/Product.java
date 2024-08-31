@@ -1,4 +1,4 @@
-package playground.data;
+package playground.data.indexing_practice;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,12 +13,13 @@ import java.util.Objects;
         indexes = {
                 @Index(name = "idx_product_id", columnList = "productId"),
                 @Index(name = "idx_price", columnList = "price"),
-                @Index(name = "idx_skuId", columnList = "skuId"),
-                @Index(name = "idx_category_availability", columnList = "category, isAvailable"),
+                @Index(name = "idx_name", columnList = "name"),
+                @Index(name = "idx_category_price", columnList = "category, price"),
         }
 )
 public class Product {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long productId;
     private String name;
     private String category;
