@@ -1,4 +1,4 @@
-package playground.data.indexing_practice;
+package playground.data;
 
 import com.speedment.jpastreamer.application.JPAStreamer;
 import jakarta.persistence.EntityManagerFactory;

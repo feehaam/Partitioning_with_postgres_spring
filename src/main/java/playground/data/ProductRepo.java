@@ -1,4 +1,4 @@
-package playground.data.indexing_practice;
+package playground.data;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
