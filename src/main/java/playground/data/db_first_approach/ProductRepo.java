@@ -1,4 +1,4 @@
-package playground.data;
+package playground.data.db_first_approach;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -29,7 +29,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-
+	// JDBC
+	implementation group: 'org.springframework', name: 'spring-jdbc', version: '6.1.12'
+	// JPA Streamer
 	implementation group: 'com.speedment.jpastreamer', name: 'jpastreamer-core', version: '3.0.4'
 	implementation group: 'com.speedment.jpastreamer.integration.spring', name: 'spring-boot-jpastreamer-autoconfigure', version: '3.0.4'
 }

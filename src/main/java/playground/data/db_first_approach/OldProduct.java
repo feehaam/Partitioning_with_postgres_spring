@@ -1,31 +1,23 @@
-package playground.data;
+package playground.data.db_first_approach;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Objects;
 
-@Entity @Data @Builder @NoArgsConstructor @AllArgsConstructor
-@Table(
-        indexes = {
-                @Index(name = "idx_product_id", columnList = "productId"),
-                @Index(name = "idx_price", columnList = "price"),
-                @Index(name = "idx_name", columnList = "name"),
-                @Index(name = "idx_category_price", columnList = "category, price"),
-        }
-)
-public class Product {
+@Entity @Table(name = "old_product") @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
+public class OldProduct {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "product_id")
     private Long productId;
     private String name;
     private String category;
     private String skuId;
     private Double price;
+    @Column(name = "available_quantity")
     private Integer availableQuantity;
+    @Column(name = "is_available")
     private Boolean isAvailable;
 
     public void setAvailableQuantity(Integer availableQuantity) {

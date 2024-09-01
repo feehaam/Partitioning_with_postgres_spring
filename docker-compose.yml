@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  index-jpa-practice:
+  partition-jpa-practice:
     image: postgres
     container_name: local_pgdb
     restart: always
