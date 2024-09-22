@@ -8,6 +8,7 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_USER: pg-user
+      POSTGRES_DB: partitioning_jpa_practice
       POSTGRES_PASSWORD: pg-password
     volumes:
       - local_pgdata:/var/lib/postgresql/data

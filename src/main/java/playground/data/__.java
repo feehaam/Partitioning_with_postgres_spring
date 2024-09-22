@@ -8,11 +8,11 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class __ {
 
-	@Autowired
-	private ApplicationContext applicationContext;
+    @Autowired
+    private ApplicationContext applicationContext;
 
-	public static void main(String ... __) {
-		SpringApplication.run(__.class, __);
-	}
+    public static void main(String... __) {
+        SpringApplication.run(__.class, __);
+    }
 
 }
